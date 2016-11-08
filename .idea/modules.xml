@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Danmu.iml" filepath="$PROJECT_DIR$/Danmu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FloatingViewLib/FloatingViewLib.iml" filepath="$PROJECT_DIR$/FloatingViewLib/FloatingViewLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appDanmuDemo/appDanmuDemo.iml" filepath="$PROJECT_DIR$/appDanmuDemo/appDanmuDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/danmu/danmu.iml" filepath="$PROJECT_DIR$/danmu/danmu.iml" />
+    </modules>
+  </component>
+</project>

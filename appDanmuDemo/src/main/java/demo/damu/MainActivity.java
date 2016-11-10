@@ -27,32 +27,43 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout root;
 
     DamBuilder dam;
-
+    @BindView(R.id.btn_clean)
+    Button btnClean;
+    boolean isDanmVisible = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        dam = new DamBuilder(this,root)
-        .setDamPos(DamuFloating.DamuPos.Top)
-        .setOnLikeClickListener(lickClickListener)
-        .setDamTxtSize(32)
-        .setDamVisible(true);
+        dam = new DamBuilder(this, root)
+                .setDamPos(DamuFloating.DamuPos.Top)
+                .setOnLikeClickListener(lickClickListener)
+                .setDamTxtSize(32)
         ;
 
     }
 
     @OnClick(R.id.btn_send)
-    public void onClick() {
+    public void onClick1() {
         String txt = etDm.getText().toString();
-        dam.sendDanmu(new Danmu(15,txt));
+        dam.sendDanmu(new Danmu(15, txt));
     }
 
     DamBuilder.OnLickClickListener lickClickListener = new DamBuilder.OnLickClickListener() {
         @Override
         public void onLickClick(int danmuId) {
-            Log.e(TAG,"click like id : "+danmuId);
+            Log.e(TAG, "click like id : " + danmuId);
         }
     };
+
+    @OnClick(R.id.btn_clean)
+    public void onClick2() {
+        if(isDanmVisible){
+            isDanmVisible = false;
+        }else{
+            isDanmVisible = true;
+        }
+        dam.setDanmuVisible(isDanmVisible);
+    }
 }
